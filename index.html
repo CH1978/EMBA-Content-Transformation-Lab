@@ -8,11 +8,11 @@
 :root{
   --bg:#090d1a;
   --card:#111b33;
-  --stroke:rgba(212,175,55,0.12); /* 奢華金屬線條 */
+  --stroke:rgba(212,175,55,0.12); /* 頂級低調金屬線條 */
   --text:#f1f5f9;
   --muted:#94a3b8;
   --primary:#2563eb; /* 皇家紳士藍 */
-  --accent:#c5a880;  /* 香檳低調金 */
+  --accent:#c5a880;  /* 奢華香檳金 */
   --danger:#f87171;
 }
 *{box-sizing:border-box}
@@ -22,7 +22,7 @@ body{
   background:radial-gradient(circle at top,#111b36,#090d1a);
   color:var(--text);
   line-height:1.65;
-  letter-spacing: 0.5px; /* 拉開字距，增加呼吸感 */
+  letter-spacing: 0.5px; /* 拉開字距，建立高階品牌的呼吸感 */
 }
 .container{max-width:1100px;margin:auto;padding:0 24px;}
 
@@ -171,7 +171,7 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
       <div class="small">核心指導顧問親操｜嚴格隱私保密協定｜採預約制</div>
     </div>
     <div class="hero-media">
-      <!-- 大師級藍金調性幾何幾何圖表 -->
+      <!-- 國際大師級藍金調性幾何幾何圖表 -->
       <svg class="hero-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="80" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.25"/>
         <path d="M30 140 L70 90 L120 120 L170 50" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -209,7 +209,7 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
     </div>
   </div>
 
-  <!-- BEFORE / AFTER (20年經驗場景化痛點重構) -->
+  <!-- BEFORE / AFTER (真實高管痛點場景化) -->
   <div class="section">
     <div class="title">真實轉譯案例對比</div>
     <div class="card">
@@ -241,28 +241,48 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
     </div>
   </div>
 
-  <!-- MODULAR SERVICES -->
+  <!-- MODULAR SERVICES (方案區塊：含價格錨定、AI教學加碼) -->
   <div class="section">
     <div class="title">首席顧問服務方案</div>
     <div class="grid">
       
       <!-- 方案 A：核心論文專案 -->
-      <div class="card" style="border: 1px solid rgba(197,168,128,0.3); background: linear-gradient(180deg, rgba(17,27,51,0.95), rgba(17,27,51,0.7)); position: relative;">
-        <div style="position: absolute; top: -12px; right: 20px; background: var(--accent); color: #000; font-size: 11px; padding: 2px 12px; border-radius: 999px; font-weight: 700; letter-spacing: 1px;">EMBA 畢業首選</div>
-        <h3 style="color: var(--accent); font-size: 20px; margin-bottom: 8px;">方案 A｜碩博士・EMBA 核心論文專案</h3>
-        <p class="muted" style="margin-bottom: 16px;">專為在職專班畢業論文與終極個案研究打造，破除「實務與學術無法接軌」的退件循環。</p>
-        <div style="border-bottom: 1px solid var(--stroke); padding-bottom: 16px; margin-bottom: 16px;">
-          <div style="font-size: 13px; color: var(--muted);">專案全額</div>
-          <div class="price" style="margin: 2px 0 6px; color:#fff;">NT$36,000</div>
-          <div style="font-size: 13px; color: var(--accent); background: rgba(197,168,128,0.08); display: inline-block; padding: 4px 10px; border-radius: 6px; font-weight: 500; border: 1px solid rgba(197,168,128,0.15);">
+      <div class="card" style="border: 1px solid rgba(197,168,128,0.4); background: linear-gradient(180deg, rgba(17,27,51,0.98), rgba(17,27,51,0.75)); position: relative; box-shadow: 0 20px 50px rgba(197,168,128,0.08);">
+        
+        <!-- 緊迫感標籤 -->
+        <div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, #c5a880, #a88958); color: #000; font-size: 11px; padding: 3px 14px; border-radius: 999px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 12px rgba(197,168,128,0.25);">
+          EMBA 畢業首選｜本月餘 3 個席位
+        </div>
+        
+        <h3 style="color: var(--accent); font-size: 21px; margin-bottom: 8px; font-weight: 700;">方案 A｜碩博士・EMBA 核心論文專案</h3>
+        <p class="muted" style="margin-bottom: 20px; font-size: 14px;">專為在職專班畢業論文與終極個案研究打造，由資深品牌戰略顧問親自操盤，破除「實務與學術無法接軌」的退件循環。</p>
+        
+        <!-- 價格防殺價錨定結構 -->
+        <div style="border-bottom: 1px solid var(--stroke); padding-bottom: 18px; margin-bottom: 18px;">
+          <div style="display: flex; align-items: baseline; gap: 12px;">
+            <span style="font-size: 13px; color: var(--muted); text-decoration: line-through;">市場標準定價 NT$45,000</span>
+            <span style="font-size: 11px; background: rgba(248,113,113,0.1); color: #f87171; padding: 2px 8px; border-radius: 4px; font-weight: 600;">限時經理人特惠 -NT$9,000</span>
+          </div>
+          <div class="price" style="margin: 6px 0; color:#ffffff; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;">
+            <span style="font-size: 18px; font-weight: 500; color: var(--accent); margin-right: 4px;">特價 NT$</span>36,000 <span style="font-size: 13px; color: var(--muted); font-weight: 4px;">/ 專案全額</span>
+          </div>
+          <div style="font-size: 12.5px; color: var(--accent); background: rgba(197,168,128,0.06); display: inline-block; padding: 6px 12px; border-radius: 6px; font-weight: 500; border: 1px solid rgba(197,168,128,0.15); margin-top: 6px; line-height: 1.4;">
             ⚖️ 經理人保障條款：首期款 NT$30,000 啟動，尾款 NT$6,000 滿意交付
           </div>
         </div>
+        
         <ul style="margin-bottom: 20px;">
           <li>核心內容架構重組、學術文獻語境與脈絡覆核</li>
           <li>企業經營實戰案例轉譯，將盲點邏輯優化清晰化</li>
           <li>一對一顧問級審視，大幅降低口試被指導教授退件機率</li>
-          <li style="color: #ffffff; font-weight: 500;">✨ 專案學員獨享：學期日常個案報告戰略支持加購價 NT$2,000 / 份</li>
+          
+          <!-- 🔥 AI教學高階價值感加碼 -->
+          <li style="color: #ffffff; font-weight: 500; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; border-left: 3px solid var(--accent); margin-top: 12px; margin-bottom: 12px; list-style: none; margin-left: -18px; line-height: 1.5;">
+            🎁 <strong style="color: var(--accent);">獨家加碼贈禮（價值 $6,000）：</strong><br>
+            附贈「高階經理人專屬 AI 論文與簡報效率提煉術」一對一 60 分鐘精準教學。教您如何用 AI 3秒提煉國際文獻、生成嚴謹報告結構，掌握未來 10 年的 AI 數位決策生產力！
+          </li>
+          
+          <li style="color: #cbd5e1; font-weight: 500;">✨ 專案學員獨享：學期日常個案報告戰略支持加購價 NT$2,000 / 份</li>
         </ul>
       </div>
 
@@ -273,7 +293,7 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
           <p class="muted" style="margin-bottom: 16px;">針對學期日常課堂報告、指定商業個案分析（Case Study）與期末團體報告進行高階梳理。</p>
           <div style="border-bottom: 1px solid var(--stroke); padding-bottom: 16px; margin-bottom: 16px;">
             <div style="font-size: 13px; color: var(--muted);">單案費用</div>
-            <div class="price" style="margin: 2px 0 6px; color: #e2e8f0;">NT$5,000</div>
+            <div class="price" style="margin: 2px 0 6px; color: #e2e8f0; font-size: 24px; font-weight: 700;">NT$5,000</div>
             <div style="font-size: 13px; color: var(--muted); background: rgba(255,255,255,0.03); display: inline-block; padding: 4px 10px; border-radius: 6px;">
               📌 本方案採全額預付啟動
             </div>
@@ -302,7 +322,7 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
       </div>
       <div class="testi-card">
         <div class="testi-meta">傳統製造業 第二代接班人</div>
-        <p class="testi-text">「平日工廠兩邊跑，根本沒時間死磕文字。顧問幫我把零散的接班轉型經驗提煉成漂亮的個案架構，省下了我至少幾十個晚上的時間。」</p>
+        <p class="testi-text">「平日工廠兩邊跑，根本沒時間死磕文字。顧問幫我把零散的接班轉型經驗提煉成漂亮的個案架構，省下了我至少幾十個晚補眠時間。」</p>
       </div>
       <div class="testi-card">
         <div class="testi-meta">外商醫療體系 台灣區高階主管</div>
@@ -316,7 +336,7 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
     <div class="title">立即預約專屬評估</div>
     <div class="form">
       
-      <!-- 🔒 20年經驗追加：高階資安盾牌防線，破除主管填表防禦心 -->
+      <!-- 高階資安保密盾牌 -->
       <div class="security-shield">
         <span style="font-size: 18px;">🔒</span>
         <div>
@@ -338,13 +358,13 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
         <button type="submit" class="button" style="width: 100%; margin-top: 10px;">送出資料並開啟 LINE 諮詢</button>
       </form>
 
-      <!-- ⚡ 20年經驗追加：原地轉換流暢度（避免新開視窗被攔截） -->
+      <!-- 成功轉換狀態（原地切換流程） -->
       <div id="successState" class="success-box">
         <h4>您的評估預約已成功受理</h4>
         <p style="font-size: 14px; color: var(--muted);">為保障您的隱私與一對一諮詢權益，請複製下方專案核准碼：</p>
         <div class="code-badge" id="projectCode">EMBA-9999</div>
-        <p style="font-size: 14.5px; margin-bottom: 24px;">請點擊下方按鈕加入 LINE 顧問，並將核准碼傳送給我們，我們將立即為您進行首次一對一檔案評估。</p>
-        <a href="https://line.me/ti/p/~chinghungw" target="_blank" class="button" style="background: linear-gradient(135deg, #22c55e, #16a34a);">一對一 LINE 深度對談</a>
+        <p style="font-size: 14.5px; margin-bottom: 24px;">請點擊下方按鈕加入 LINE 顧問。系統已為您自動打好資料，您只需在 LINE 中按下傳送即可啟動檔案評估！</p>
+        <a href="https://line.me/ti/p/~chinghungw" target="_blank" class="button" style="background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 10px 25px rgba(34,197,94,0.25);">一對一 LINE 智慧對談</a>
       </div>
 
     </div>
@@ -360,41 +380,40 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
 <!-- STICKY BAR -->
 <div class="sticky">
   <div class="sticky-title">EMBA Content Lab｜高階轉譯快速評估</div>
-  <a href="https://line.me/ti/p/~chinghungw" target="_blank">LINE 立即諮詢</a>
+  <a href="#contact">立即諮詢</a>
 </div>
 
-<!-- FORM HANDLING SCRIPT (高階轉化流暢度邏輯優化) -->
+<!-- 智慧自動打包打包傳輸核心 SCRIPT -->
 <script>
 document.getElementById('consultForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // 阻止網頁跳轉
+  e.preventDefault(); // 阻止網頁刷新
   
-  // 1. 抓取客戶在網頁上填寫的真實內容
+  // 1. 精準抓取高管輸入的內容
   const name = document.getElementById('name').value;
   const title = document.getElementById('title').value;
   const notes = document.getElementById('notes').value;
   
-  // 2. 生成隨機專案代碼
+  // 2. 生成尊榮感隨機代碼
   const randomCode = 'EMBA-' + Math.floor(1000 + Math.random() * 9000);
   document.getElementById('projectCode').innerText = randomCode;
   
-  // 3. 原地轉換畫面（保持高規格的視覺回饋）
+  // 3. 完美的 CRO 轉化介面切換
   document.getElementById('consultForm').style.display = 'none';
   document.querySelector('.security-shield').style.display = 'none';
   document.getElementById('successState').style.display = 'block';
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 
-  // 🔥 20年實戰密技：把資料打包成 LINE 訊息格式（自動換行與排版）
+  // 4. 20年行銷核心：將資料自動排版打包成 LINE 訊息格式
   const lineTextMessage = `您好，我已在網頁完成評估預約：\n\n` +
                           `【專案代碼】${randomCode}\n` +
                           `【客戶姓名】${name}\n` +
                           `【現職/校系】${title}\n` +
                           `【需求痛點】${notes}`;
   
-  // 將文字轉化為 LINE 連結專用的編碼
+  // 將文字安全編碼為 URL 格式
   const encodedText = encodeURIComponent(lineTextMessage);
   
-  // 4. 動態修改畫面中那個綠色 LINE 按鈕的連結
-  // 這樣客戶點擊按鈕時，打開 LINE 就會「自動帶入」他剛剛填的所有資料！
+  // 5. 動態改寫成功區塊 LINE 按鈕的超連結（利用 LINE Share API 自動帶入文字）
   const lineButton = document.querySelector('#successState .button');
   lineButton.href = `https://line.me/R/share?text=${encodedText}`;
 });
