@@ -388,34 +388,46 @@ input:focus,textarea:focus{outline:1px solid var(--accent);background:rgba(0,0,0
 document.getElementById('consultForm').addEventListener('submit', function(e) {
   e.preventDefault(); // 阻止網頁刷新
   
-  // 1. 精準抓取高管輸入的內容
+  // 1. 抓取經理人填寫的內容
   const name = document.getElementById('name').value;
   const title = document.getElementById('title').value;
   const notes = document.getElementById('notes').value;
   
-  // 2. 生成尊榮感隨機代碼
+  // 2. 生成尊榮感隨機專案代碼
   const randomCode = 'EMBA-' + Math.floor(1000 + Math.random() * 9000);
   document.getElementById('projectCode').innerText = randomCode;
   
-  // 3. 完美的 CRO 轉化介面切換
+  // 3. 完美的 CRO 介面切換流程
   document.getElementById('consultForm').style.display = 'none';
   document.querySelector('.security-shield').style.display = 'none';
   document.getElementById('successState').style.display = 'block';
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 
-  // 4. 20年行銷核心：將資料自動排版打包成 LINE 訊息格式
+  // 4. 大師級格式化：將資料自動打包成整齊的 LINE 訊息格式
   const lineTextMessage = `您好，我已在網頁完成評估預約：\n\n` +
                           `【專案代碼】${randomCode}\n` +
                           `【客戶姓名】${name}\n` +
                           `【現職/校系】${title}\n` +
                           `【需求痛點】${notes}`;
   
-  // 將文字安全編碼為 URL 格式
+  // 將文字安全編碼為安全 URL 格式
   const encodedText = encodeURIComponent(lineTextMessage);
   
-  // 5. 動態改寫成功區塊 LINE 按鈕的超連結（利用 LINE Share API 自動帶入文字）
+  // 5. 【20年經驗終極優化】自動識別手機/電腦裝置，完美導入 chinghungw
+  const baseLineLink = 'https://line.me/ti/p/chinghungw';
   const lineButton = document.querySelector('#successState .button');
-  lineButton.href = `https://line.me/R/share?text=${encodedText}`;
+  
+  // 判斷是否為行動裝置
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    // 手機版：直接喚起 LINE App 加好友，並嘗試夾帶文字訊息
+    lineButton.href = `${baseLineLink}?text=${encodedText}`;
+  } else {
+    // 電腦版：直接走 LINE 官方加好友通道，並在新視窗優雅開啟
+    lineButton.href = baseLineLink;
+    lineButton.setAttribute('target', '_blank');
+  }
 });
 </script>
 
